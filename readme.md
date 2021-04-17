@@ -11,8 +11,14 @@ python3 -m venv auth
 source auth/bin/activate
 export FLASK_APP=project
 export FLASK_DEBUG=1
-flask run
 ```
+Python REPL;
+```
+from project import db, create_app
+db.create_all(app=create_app())
+```
+
+`flask run`
 
 Libs used:
 `flask flask-sqlalchemy flask-login`
